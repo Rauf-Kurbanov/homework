@@ -4,7 +4,7 @@ public final class LinkedStack extends AbstractStack {
 
     private Node head;
 
-    private class Node {
+    private static class Node {
 
         private Object value;
         private Node next;
@@ -16,7 +16,7 @@ public final class LinkedStack extends AbstractStack {
     }
 
     @Override
-    public void push(Object value) {  // Why we don't use this. ?
+    public void push(Object value) {  
         size++;
         head = new Node(head, value);
     }

@@ -1,6 +1,6 @@
 /**
-  *Написать список в виде класса
-  */
+ * Написать список в виде класса
+ */
 package main;
 
 public class List {
@@ -8,21 +8,26 @@ public class List {
     int length = 0;
     private ListElement head;
     private ListElement tail = head;
-    
+
+    /**
+     * Element of list
+     */
     private class ListElement {
 
-    private Object value;
-    private ListElement next;
-    
-/**
- * element of list
- */    
-    ListElement(Object value) {
-        this.value = value;
-        this.next = null;
-    }
-}
+        private Object value;
+        private ListElement next;
 
+        ListElement(Object value) {
+            this.value = value;
+            this.next = null;
+        }
+    }
+
+    /**
+     * Appends the specified element to the end of this list
+     *
+     * @param value
+     */
     public void add(Object value) {
         ListElement newEl = new ListElement(value);
         this.tail.next = newEl;
@@ -30,6 +35,9 @@ public class List {
         this.length++;
     }
 
+    /**
+     * Prints this list
+     */
     public void print() {
         ListElement temp = this.head;
         while (temp.next != null) {
@@ -38,13 +46,23 @@ public class List {
         }
     }
 
+    /**
+     * Removes all of the elements from this list
+     */
     public void clear() {
         this.head.next = null;
         this.tail = this.head;
         this.length = 0;
     }
 
-    public boolean contains(int value) {
+    /**
+     * Returns true if this list contains all of the elements of the specified
+     * collection
+     *
+     * @param value
+     * @return
+     */
+    public boolean contains(Object value) {
         ListElement temp = this.head;
         while (temp.next != null) {
             if (temp.next.value == value) {
@@ -55,7 +73,16 @@ public class List {
         return false;
     }
 
+    /**
+     * Returns the element at the specified position in this list
+     *
+     * @param index
+     * @return
+     */
     public Object get(int index) {
+        if (index >= this.length) {
+            return null;
+        }
         ListElement temp = this.head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
@@ -63,21 +90,41 @@ public class List {
         return temp.next.value;
     }
 
+    /**
+     * Returns the index in this list of the first occurrence of the specified
+     * element, or -1 if this list does not contain this element
+     *
+     * @param value
+     * @return
+     */
     public int indexOf(Object value) {
         ListElement temp = this.head;
         int i = 0;
-        while (temp.next.value != value) {
+        while (temp.next != null) {
+            if (temp.next.value == value) {
+                return i;
+            }
             i++;
             temp = temp.next;
         }
-        return i;
+        return -1;
     }
 
+    /**
+     * Returns true if this list is empty
+     *
+     * @return
+     */
     public boolean isEmpty() {
         return this.head.next == null;
     }
 
-    public void remove(int value) {
+    /**
+     * Removes the first occurrence in this list of the specified element
+     *
+     * @param value
+     */
+    public void remove(Object value) {
         ListElement temp = this.head;
         while (temp.next != null) {
             if (temp.next.value == value) {
@@ -89,7 +136,17 @@ public class List {
         }
     }
 
-    public void set(int index, int value) {
+    /**
+     * Replaces the element at the specified position in this list with the
+     * specified element
+     *
+     * @param index
+     * @param value
+     */
+    public void set(int index, Object value) {
+        if (index > this.length) {
+            return;
+        }
         ListElement temp = this.head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
