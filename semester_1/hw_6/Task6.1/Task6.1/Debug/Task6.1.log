@@ -1,0 +1,20 @@
+﻿Построение начато 04.12.2011 20:09:51.
+     1>Проект "D:\Prog\C++\Homework6\Task6.1\Task6.1\Task6.1.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Task6.1.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+       ManifestResourceCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         Для всех выходных данных обновления не требуется.
+       Manifest:
+         Для всех выходных данных обновления не требуется.
+       FinalizeBuildStatus:
+         Файл "Debug\Task6.1.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Task6.1.lastbuildstate".
+     1>Построение проекта "D:\Prog\C++\Homework6\Task6.1\Task6.1\Task6.1.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.05

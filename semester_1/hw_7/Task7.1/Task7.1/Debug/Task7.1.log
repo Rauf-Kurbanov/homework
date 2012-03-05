@@ -1,0 +1,35 @@
+﻿Построение начато 26.12.2011 0:15:47.
+     1>Проект "D:\Prog\to send\Task7.1\Task7.1\Task7.1.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\Task7.1.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp sort.cpp
+         main.cpp
+     1>d:\prog\to send\task7.1\task7.1\main.cpp(26): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325): см. объявление "sscanf"
+         Создание кода...
+         Компиляция...
+         sort.cpp
+         Создание кода...
+       ManifestResourceCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Prog\to send\Task7.1\Debug\Task7.1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Task7.1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Prog\to send\Task7.1\Debug\Task7.1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Prog\to send\Task7.1\Debug\Task7.1.lib" /MACHINE:X86 Debug\Task7.1.exe.embed.manifest.res
+         Debug\listPoint.obj
+         Debug\listArray.obj
+         Debug\main.obj
+         Debug\sort.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Task7.1.exe.embed.manifest" /manifest Debug\Task7.1.exe.intermediate.manifest
+         Для всех выходных данных обновления не требуется.
+       LinkEmbedManifest:
+         Для всех выходных данных обновления не требуется.
+         Task7.1.vcxproj -> D:\Prog\to send\Task7.1\Debug\Task7.1.exe
+       FinalizeBuildStatus:
+         Файл "Debug\Task7.1.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\Task7.1.lastbuildstate".
+     1>Построение проекта "D:\Prog\to send\Task7.1\Task7.1\Task7.1.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:01.00

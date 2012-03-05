@@ -1,0 +1,61 @@
+#include "stack.h"
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+#include <conio.h>
+#include <string> 
+
+using namespace std;
+
+int main()
+{
+
+	setlocale(0, "Rus");
+
+	Stack *safe = createStack();
+
+	ifstream in("test2.txt");
+    if (!in)
+    {
+        cerr << "File not found" << endl;
+        return 1;
+    }
+
+	string s = "";
+
+	while (in >> s)
+	{
+		if (s[0] >= '0' && s[0] <= '9')
+		{
+			int num = 0;
+			for (int i = 0; i < s.size() ; i++)
+			{
+				num *= 10;
+				num += s[i] - '0';
+			}
+			push(num, safe);
+		}
+		else
+		{
+			int e1 = stackTop(safe);
+			pop(safe);
+			int e2 = stackTop(safe);
+			pop(safe);
+
+			if (s[0] == '+')
+				push(e2 + e1, safe);
+			if (s[0] == '-')
+				push(e2 - e1, safe);
+			if (s[0] == '*')
+				push(e2 * e1, safe);
+			if (s[0] == '/')
+				push(e2 / e1, safe);
+		}
+	}
+	in.close();
+
+	cout << "Answer:" << endl;
+	cout << stackTop(safe) << endl;
+	
+	return 0;
+}
