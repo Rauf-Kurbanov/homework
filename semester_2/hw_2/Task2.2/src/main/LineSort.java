@@ -35,7 +35,7 @@ public class LineSort {
      * @param i
      * @param j
      */
-    private static void columnSwap(int[][] arr, int i, int j) {
+    public static void columnSwap(int[][] arr, int i, int j) {
         int[] temp = new int[arr.length];
         for (int k = 0; k < arr.length; k++) {
             temp[k] = arr[k][i];
@@ -49,7 +49,7 @@ public class LineSort {
      *
      * @param array
      */
-    private static void Sort(int[][] array) {
+    public static void Sort(int[][] array) {
         boolean flag = true;
         while (flag) {
             flag = false;
