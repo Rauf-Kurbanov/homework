@@ -13,6 +13,11 @@ public class LineSort {
         printMatrix(array);
     }
 
+    /**
+     * Prints this matrix
+     *
+     * @param array
+     */
     private static void printMatrix(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
@@ -23,6 +28,13 @@ public class LineSort {
         System.out.println();
     }
 
+    /**
+     * Swaps two coloumns of this matrix
+     *
+     * @param arr
+     * @param i
+     * @param j
+     */
     private static void columnSwap(int[][] arr, int i, int j) {
         int[] temp = new int[arr.length];
         for (int k = 0; k < arr.length; k++) {
@@ -32,6 +44,11 @@ public class LineSort {
         }
     }
 
+    /**
+     * Sort the columns of the matrix elements for the first line
+     *
+     * @param array
+     */
     private static void Sort(int[][] array) {
         boolean flag = true;
         while (flag) {
