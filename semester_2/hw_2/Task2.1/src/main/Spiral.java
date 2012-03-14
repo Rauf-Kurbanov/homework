@@ -9,13 +9,12 @@ public class Spiral {
     public static void main(String args[]) {
         Integer[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println(matrixToLine(array));
-
     }
 
     /**
      * Prints the array elements when traversing it in a spiral from the center
      *
-     * @param array
+     * @param array //matrix of numbers to write in line
      */
     public static String matrixToLine(Integer[][] array) {
         Integer cent = array.length / 2; //index of matrix central element 
