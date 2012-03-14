@@ -26,7 +26,7 @@ public class List {
     /**
      * Appends the specified element to the end of this list
      *
-     * @param value
+     * @param value // value of added element
      */
     public void add(Object value) {
         ListElement newEl = new ListElement(value);
@@ -59,8 +59,9 @@ public class List {
      * Returns true if this list contains all of the elements of the specified
      * collection
      *
-     * @param value
-     * @return
+     * @param value //value of this element
+     * @return //true if this list contains all of the elements of the specified
+     * collection
      */
     public boolean contains(Object value) {
         ListElement temp = this.head;
@@ -76,8 +77,8 @@ public class List {
     /**
      * Returns the element at the specified position in this list
      *
-     * @param index
-     * @return
+     * @param index // index of list element
+     * @return // value of this element
      */
     public Object get(int index) {
         if (index >= this.length) {
@@ -94,8 +95,9 @@ public class List {
      * Returns the index in this list of the first occurrence of the specified
      * element, or -1 if this list does not contain this element
      *
-     * @param value
-     * @return
+     * @param value //
+     * @return //the index in this list of the first occurrence of the specified
+     * element, or -1 if this list does not contain this element
      */
     public int indexOf(Object value) {
         ListElement temp = this.head;
@@ -113,7 +115,7 @@ public class List {
     /**
      * Returns true if this list is empty
      *
-     * @return
+     * @return //true if this list is empty 
      */
     public boolean isEmpty() {
         return this.head.next == null;
@@ -122,7 +124,7 @@ public class List {
     /**
      * Removes the first occurrence in this list of the specified element
      *
-     * @param value
+     * @param value //value of this element
      */
     public void remove(Object value) {
         ListElement temp = this.head;
@@ -138,10 +140,11 @@ public class List {
 
     /**
      * Replaces the element at the specified position in this list with the
-     * specified element
+     * specified element.
      *
-     * @param index
-     * @param value
+     * @param index //index there element will be replaced. If index is more
+     * than list length element won't be replaced.
+     * @param value //value of this element
      */
     public void set(int index, Object value) {
         if (index > this.length) {

@@ -9,14 +9,14 @@ public class LineSort {
         int[][] array = {{5, 6, 4}, {1, 2, 3}, {7, 8, 9}};
 
         printMatrix(array);
-        Sort(array);
+        sort(array);
         printMatrix(array);
     }
 
     /**
      * Prints this matrix
      *
-     * @param array
+     * @param array //array of matrix to print
      */
     private static void printMatrix(int[][] array) {
         for (int i = 0; i < array.length; i++) {
@@ -31,9 +31,9 @@ public class LineSort {
     /**
      * Swaps two coloumns of this matrix
      *
-     * @param arr
-     * @param i
-     * @param j
+     * @param arr //input array of matrix
+     * @param i //first coloumn number
+     * @param j //secind coloumn number
      */
     public static void columnSwap(int[][] arr, int i, int j) {
         int[] temp = new int[arr.length];
@@ -47,9 +47,9 @@ public class LineSort {
     /**
      * Sort the columns of the matrix elements for the first line
      *
-     * @param array
+     * @param array //array of matrix
      */
-    public static void Sort(int[][] array) {
+    public static void sort(int[][] array) {
         boolean flag = true;
         while (flag) {
             flag = false;
