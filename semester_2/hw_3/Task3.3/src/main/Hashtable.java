@@ -12,31 +12,34 @@ public class Hashtable implements HashInterface {
     Hashtable(int capacity) {
         this.capasity = capacity;
         this.buckets = new List[capasity];
+        for (int i = 0; i < this.capasity; i++) {
+            this.buckets[i] = new List();
+        }
     }
 
     Hashtable() {
         this.buckets = new List[this.capasity];
+        for (int i = 0; i < this.capasity; i++) {
+            this.buckets[i] = new List();
+        }
     }
 
     @Override
     public void addHT(String token) {
-        this.buckets[HashFunc(token)].add(token);
+        buckets[hashFunc(token)].add(token);
     }
 
     @Override
-    public boolean exist(String token) {
-        return (this.buckets[HashFunc(token)].contains(token));
+    public boolean isExist(String token) {
+        return (buckets[hashFunc(token)].isContains(token));
     }
-
+    
     @Override
-    public void printHt() {
-        for (int i = 0; i < this.capasity; i++) {
-            this.buckets[i].print();
-        }
+    public int size() {
+        return buckets.length;
     }
-
-    public int HashFunc(String token) {
-        //return token.hashCode() % this.capasity;
-        return (Integer.parseInt(token) + 19) % this.capasity;
+    
+    protected int hashFunc(String token) {
+        return token.hashCode() % capasity;
     }
 }

@@ -60,7 +60,7 @@ public class List {
      * @return //true if this list contains all of the elements of the specified
      * collection
      */
-    public boolean contains(Object value) {
+    public boolean isContains(Object value) {
         ListElement temp = this.head;
         while (temp.next != null) {
             if (temp.next.value == value) {
