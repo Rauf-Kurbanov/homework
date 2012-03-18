@@ -4,4 +4,7 @@ package main;
  *
  * @author paRRadox
  */
-public abstract class HashFunc implements HashFuncInterface {}
+public interface HashFunc {
+    
+    public int hash(String token, int capasity);
+}

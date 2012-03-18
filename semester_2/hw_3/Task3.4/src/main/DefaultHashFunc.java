@@ -4,7 +4,7 @@ package main;
  *
  * @author paRRadox
  */
-public final class DefaultHashFunc extends HashFunc {
+public final class DefaultHashFunc extends AbstractHashFunc {
 
     @Override
     public int hash(String token, int capasity) {
