@@ -4,6 +4,4 @@ package main;
  *
  * @author paRRadox
  */
-public class HashFunc {
-    
-}
+public abstract class HashFunc implements HashFuncInterface {}
