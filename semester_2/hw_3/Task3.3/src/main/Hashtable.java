@@ -6,20 +6,25 @@ package main;
  */
 public class Hashtable implements HashInterface {
 
-    protected int capasity = 500;
-    protected List[] buckets;
-
-    Hashtable(int capacity) {
-        this.capasity = capacity;
-        this.buckets = new List[capasity];
-        for (int i = 0; i < this.capasity; i++) {
+    
+    /**
+     * Creates a table of given capacity
+     * @param capacity capasity of hashtable
+     */
+    public Hashtable(int capacity) {
+        this.capacity = capacity;
+        this.buckets = new List[capacity];
+        for (int i = 0; i < this.capacity; i++) {
             this.buckets[i] = new List();
         }
     }
-
-    Hashtable() {
-        this.buckets = new List[this.capasity];
-        for (int i = 0; i < this.capasity; i++) {
+    
+    /**
+     * Creates a table of default capacity
+     */
+    public Hashtable() {
+        this.buckets = new List[this.capacity];
+        for (int i = 0; i < this.capacity; i++) {
             this.buckets[i] = new List();
         }
     }
@@ -39,7 +44,16 @@ public class Hashtable implements HashInterface {
         return buckets.length;
     }
     
-    protected int hashFunc(String token) {
-        return token.hashCode() % capasity;
+    /**
+     * Returnes hashcode of string
+     * @param token string to hashcode
+     * @return hash of token
+     */
+    private int hashFunc(String token) {
+        return token.hashCode() % capacity;
     }
+    
+    private int capacity = 500;
+    private List[] buckets;
+    
 }

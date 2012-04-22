@@ -1,7 +1,9 @@
 package main;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import org.junit.*;
-import static org.junit.Assert.*;
 
 public class ListTest {
 
@@ -61,20 +63,17 @@ public class ListTest {
     public void testIsContains() {
         int value = 3;
         List instance = new List();
-        boolean expResult = true;
         for (int i = 0; i < 5; i++) {
             instance.add(i);
         }
-        boolean result = instance.isContains(value);
-        assertEquals(expResult, result);
+        assertTrue(instance.isContains(value));
     }
     
     @Test
     public void testContainsForEmpty() {
         int value = 7;
         List instance = new List();
-        boolean expResult = false;
-        assertEquals(expResult, instance.isContains(value));
+        assertFalse(instance.isContains(value));
     }
 
     /**
@@ -114,11 +113,9 @@ public class ListTest {
     @Test
     public void testIsEmpty() {
         List instance = new List();
-        boolean expResult = true;
         instance.clear();
         instance.set(5, 100);
-        boolean result = instance.isEmpty();
-        assertEquals(expResult, result);
+        assertTrue(instance.isEmpty());
     }
 
     /**
@@ -132,7 +129,7 @@ public class ListTest {
             instance.add(i);
         }
         instance.remove(value);
-        Assert.assertEquals(instance.isContains(value), false);
+        assertFalse(instance.isContains(value));
     }
 
     /**

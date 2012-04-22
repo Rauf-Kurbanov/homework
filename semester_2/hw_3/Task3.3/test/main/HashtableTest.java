@@ -1,6 +1,8 @@
 package main;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import org.junit.*;
 
 /**
@@ -37,7 +39,7 @@ public class HashtableTest {
         Hashtable instance = new Hashtable();
         instance.addHT("ololo");
         instance.addHT(token);
-        assertEquals(true, instance.isExist(token));
+        assertTrue(instance.isExist(token));
     }
 
     /**
@@ -47,11 +49,7 @@ public class HashtableTest {
     public void testIsExistForEmpty() {
         String token = "ololo";
         Hashtable instance = new Hashtable();
-        //instance.addHT("123");
-        System.out.println(instance.hashFunc(token));
-        boolean expResult = false;
-        boolean result = instance.isExist(token);
-        assertEquals(expResult, result);
+        assertFalse(instance.isExist(token));
     }
     
     /**
@@ -63,23 +61,7 @@ public class HashtableTest {
         Hashtable instance = new Hashtable();
         instance.addHT("123");
         instance.addHT(token);
-        System.out.println(instance.hashFunc(token));
-        boolean expResult = true;
-        boolean result = instance.isExist(token);
-        assertEquals(expResult, result);
-    }
-  
-    /**
-     * Test of HashFunc method, of class Hashtable.
-     */
-    @Test
-    public void testHashFunc() {
-        String token = "ololo123";
-        Hashtable instance = new Hashtable(10);
-        int expResult = token.hashCode() % 10;
-        int result = instance.hashFunc(token);
-        assertEquals(expResult, result);
-        System.out.println(instance.hashFunc(token));
+        assertTrue(instance.isExist(token));
     }
     
     /**
