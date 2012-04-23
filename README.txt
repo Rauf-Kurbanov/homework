@@ -1,1 +1,1 @@
-My Java homework special for Mr Litvinov
+My programming homework special for Mr Litvinov
