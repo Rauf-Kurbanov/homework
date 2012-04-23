@@ -104,7 +104,10 @@ public class List<T> implements Iterable {
             this.next = null;
         }
     }
-
+    
+    /**
+     * iterator for this list
+     */
     private class ListIterator implements Iterator<T> {
 
         public ListIterator() {
