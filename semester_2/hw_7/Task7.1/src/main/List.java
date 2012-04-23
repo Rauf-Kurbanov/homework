@@ -8,7 +8,6 @@ import java.lang.IndexOutOfBoundsException;
  *
  * @author paRRadox
  */
-
 public class List<T> implements Iterable {
 
     List() {
@@ -105,13 +104,13 @@ public class List<T> implements Iterable {
             this.next = null;
         }
     }
-    
-    private class ListIterator implements Iterator<T>{
-        
+
+    private class ListIterator implements Iterator<T> {
+
         public ListIterator() {
             this.preCurrent = head;
         }
-        
+
         @Override
         public boolean hasNext() {
             if (preCurrent.next == null) {
@@ -120,7 +119,7 @@ public class List<T> implements Iterable {
                 return (preCurrent.next.next != null);
             }
         }
-        
+
         @Override
         public T next() {
             if (!hasNext()) {
@@ -131,7 +130,7 @@ public class List<T> implements Iterable {
                 return preCurrent.next.value;
             }
         }
-        
+
         @Override
         public void remove() {
             if (hasNext()) {
@@ -139,16 +138,14 @@ public class List<T> implements Iterable {
                 length--;
             }
         }
-        
         //previous for current element
         private ListElement<T> preCurrent;
     }
-    
+
     @Override
     public Iterator<T> iterator() {
         return new ListIterator();
     }
-    
     private int length = 0;
     private ListElement<T> head;
     private ListElement<T> tail = head;
