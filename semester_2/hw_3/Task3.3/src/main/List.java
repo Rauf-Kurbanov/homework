@@ -2,22 +2,12 @@ package main;
 
 public class List {
 
-    int length = 0;
-    private ListElement head;
-    private ListElement tail = head;
-
-    /**
-     * Element of list
-     */
-    private class ListElement {
-
-        private Object value;
-        private ListElement next;
-
-        ListElement(Object value) {
-            this.value = value;
-            this.next = null;
-        }
+    List() {
+        this.length = 0;
+        ListElement guard = new ListElement(0);
+        guard.next = null;
+        this.head = guard;
+        this.tail = guard;
     }
 
     /**
@@ -112,7 +102,7 @@ public class List {
     /**
      * Returns true if this list is empty
      *
-     * @return //true if this list is empty 
+     * @return //true if this list is empty
      */
     public boolean isEmpty() {
         return this.head.next == null;
@@ -157,11 +147,20 @@ public class List {
         this.length++;
     }
 
-    List() {
-        this.length = 0;
-        ListElement guard = new ListElement(0);
-        guard.next = null;
-        this.head = guard;
-        this.tail = guard;
+    /**
+     * Element of list
+     */
+    private class ListElement {
+
+        private Object value;
+        private ListElement next;
+
+        ListElement(Object value) {
+            this.value = value;
+            this.next = null;
+        }
     }
+    private int length = 0;
+    private ListElement head;
+    private ListElement tail = head;
 }
