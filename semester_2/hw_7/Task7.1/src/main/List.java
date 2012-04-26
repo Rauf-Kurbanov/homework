@@ -34,11 +34,8 @@ public class List<T> implements Iterable<T> {
      */
     public String print() {
         String result = "";
-        //Iterator<T> listIt = iterator();
         Iterator<T> listIt = this.iterator();
         while (listIt.hasNext()) {
-            //System.out.println(listIt.next());
-            //result.concat(listIt.next().toString() + " ");
             result = result + listIt.next().toString() + " ";
         }
         return result;
