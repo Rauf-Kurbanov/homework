@@ -1,14 +1,13 @@
 package main;
 
 import java.util.Iterator;
-import java.lang.NullPointerException;
-import java.lang.IndexOutOfBoundsException;
+import java.util.NoSuchElementException;
 
 /**
  *
  * @author paRRadox
  */
-public class List<T> implements Iterable {
+public class List<T> implements Iterable<T> {
 
     List() {
         this.length = 0;
@@ -25,19 +24,24 @@ public class List<T> implements Iterable {
      */
     public void add(T value) {
         ListElement newEl = new ListElement(value);
-        this.tail.next = newEl;
-        this.tail = newEl;
-        this.length++;
+        tail.next = newEl;
+        tail = newEl;
+        length++;
     }
 
     /**
      * Prints this list
      */
-    public void print() {
-        Iterator<T> listIt = iterator();
+    public String print() {
+        String result = "";
+        //Iterator<T> listIt = iterator();
+        Iterator<T> listIt = this.iterator();
         while (listIt.hasNext()) {
-            System.out.println(listIt.next());
+            //System.out.println(listIt.next());
+            //result.concat(listIt.next().toString() + " ");
+            result = result + listIt.next().toString() + " ";
         }
+        return result;
     }
 
     /**
@@ -104,20 +108,22 @@ public class List<T> implements Iterable {
             this.next = null;
         }
     }
-    
+
     /**
      * iterator for this list
      */
     private class ListIterator implements Iterator<T> {
 
         public ListIterator() {
-            this.preCurrent = head;
+            ListElement beforeHead = new ListElement(0);
+            beforeHead.next = head;
+            this.preCurrent = beforeHead;
         }
 
         @Override
         public boolean hasNext() {
             if (preCurrent.next == null) {
-                throw new NullPointerException();
+                throw new NoSuchElementException();
             } else {
                 return (preCurrent.next.next != null);
             }
@@ -129,7 +135,7 @@ public class List<T> implements Iterable {
                 throw new IndexOutOfBoundsException();
             } else {
                 preCurrent = preCurrent.next;
-                //now preCurrent become current element
+                //now preCurrent becomes current element
                 return preCurrent.next.value;
             }
         }
@@ -153,3 +159,5 @@ public class List<T> implements Iterable {
     private ListElement<T> head;
     private ListElement<T> tail = head;
 }
+
+
