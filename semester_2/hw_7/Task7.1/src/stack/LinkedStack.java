@@ -1,6 +1,6 @@
-package main;
+package stack;
 
-public class LinkedStack<T> implements StackInterface<T> {
+public class LinkedStack<T> implements Stack<T> {
 
     @Override
     public int size() {
@@ -36,7 +36,11 @@ public class LinkedStack<T> implements StackInterface<T> {
         }
         return head.value;
     }
-
+    
+    /**
+     * Node of this Stack
+     * @param <T> element type
+     */
     private static class Node<T> {
 
         private T value;

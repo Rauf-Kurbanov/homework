@@ -1,4 +1,4 @@
-package main;
+package list;
 
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -7,9 +7,9 @@ import org.junit.*;
  *
  * @author paRRadox
  */
-public class ListTest {
+public class LinkedListTest {
 
-    public ListTest() {
+    public LinkedListTest() {
     }
 
     @BeforeClass
@@ -34,7 +34,7 @@ public class ListTest {
     @Test
     public void testAddOneElem() {
         Integer value = 100500;
-        List<Integer> instance = new List<>();
+        List<Integer> instance = new LinkedList<>();
         instance.add(value);
         assertFalse(instance.isEmpty());
     }
@@ -46,7 +46,7 @@ public class ListTest {
     public void testAddFewElem() {
         String value1 = "test";
         String value2 = "my list";
-        List<String> instance = new List<>();
+        List<String> instance = new LinkedList<>();
         instance.add(value1);
         instance.add(value2);
         assertEquals("test my list ", instance.print());
@@ -58,7 +58,7 @@ public class ListTest {
      */
     @Test
     public void testPrint() {
-        List<Integer> instance = new List<>();
+        List<Integer> instance = new LinkedList<>();
         instance.add(100500);
         String expResult = "100500 ";
         String result = instance.print();
@@ -70,7 +70,7 @@ public class ListTest {
      */
     @Test
     public void testClear() {
-        List<Integer> instance = new List<>();
+        List<Integer> instance = new LinkedList<>();
         instance.add(123);
         instance.add(897);
         instance.clear();
@@ -83,7 +83,7 @@ public class ListTest {
     @Test
     public void testContains() {
         Integer value = 777;
-        List<Integer> instance = new List<>();
+        List<Integer> instance = new LinkedList<>();
         instance.add(878);
         instance.add(100);
         instance.add(value);
@@ -95,7 +95,7 @@ public class ListTest {
      */
     @Test
     public void testIsEmpty() {
-        List instance = new List();
+        List instance = new LinkedList();
         assertTrue(instance.isEmpty());
     }
 
@@ -104,7 +104,7 @@ public class ListTest {
      */
     @Test
     public void testRemove() {
-        List<String> instance = new List<>();
+        List<String> instance = new LinkedList<>();
         instance.add("aaa");
         instance.add("ccc");
         instance.add("bbb");
@@ -117,7 +117,7 @@ public class ListTest {
      */
     @Test
     public void testForeach() {
-        List<Integer> instance = new List<>();
+        List<Integer> instance = new LinkedList<>();
         instance.add(1);
         instance.add(2);
         instance.add(3);

@@ -1,4 +1,4 @@
-package main;
+package stack;
 
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -33,7 +33,7 @@ public class LinkedStackTest {
      */
     @Test
     public void testSize() {
-        LinkedStack<Integer> instance = new LinkedStack<>();
+        Stack<Integer> instance = new LinkedStack<>();
         instance.push(1);
         instance.push(2);
         instance.push(3);
@@ -45,7 +45,7 @@ public class LinkedStackTest {
      */
     @Test
     public void testIsEmpty() {
-        LinkedStack<String> instance = new LinkedStack<>();
+        Stack<String> instance = new LinkedStack<>();
         assertTrue(instance.isEmpty());
     }
 
@@ -54,7 +54,7 @@ public class LinkedStackTest {
      */
     @Test
     public void testPush() {
-        LinkedStack<String> instance = new LinkedStack<>();
+        Stack<String> instance = new LinkedStack<>();
         instance.push("ololo");
         assertEquals("ololo", instance.pop());
     }
@@ -64,7 +64,7 @@ public class LinkedStackTest {
      */
     @Test
     public void testPop() {
-        LinkedStack<Integer> instance = new LinkedStack<>();
+        Stack<Integer> instance = new LinkedStack<>();
         Integer value = 100500;
         instance.push(value);
         assertEquals(value, instance.pop());
@@ -75,7 +75,7 @@ public class LinkedStackTest {
      */
     @Test
     public void testPeek() {
-        LinkedStack<String> instance = new LinkedStack<>();
+        Stack<String> instance = new LinkedStack<>();
         instance.push("I'm too lazy");
         instance.push("to write long tests");
         assertEquals("to write long tests", instance.peek());

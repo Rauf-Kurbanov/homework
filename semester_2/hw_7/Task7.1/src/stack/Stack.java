@@ -1,6 +1,6 @@
-package main;
+package stack;
 
-public interface StackInterface<T> {
+public interface Stack<T> {
     /**
      * Pushes an item onto the top of this stack
      * @param o object to push
