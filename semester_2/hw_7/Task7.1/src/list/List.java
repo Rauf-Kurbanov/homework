@@ -14,7 +14,8 @@ public interface List<T> extends Iterable<T> {
     public void add(T value);
     
     /**
-     * Prints this list
+     * Prints this list 
+     * @return string to print
      */
     public String print();
     

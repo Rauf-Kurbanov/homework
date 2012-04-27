@@ -8,14 +8,6 @@ import java.util.NoSuchElementException;
  * @author paRRadox
  */
 public class LinkedList<T> implements List<T> {
-
-    LinkedList() {
-        this.length = 0;
-        ListElement guard = new ListElement(0);
-        guard.next = null;
-        this.head = guard;
-        this.tail = guard;
-    }
     
     @Override
     public void add(T value) {
@@ -30,7 +22,7 @@ public class LinkedList<T> implements List<T> {
         String result = "";
         Iterator<T> listIt = this.iterator();
         while (listIt.hasNext()) {
-            result = result + listIt.next().toString() + " ";
+            result += listIt.next().toString() + " ";
         }
         return result;
     }
@@ -67,6 +59,14 @@ public class LinkedList<T> implements List<T> {
                 return;
             }
         }
+    }
+    
+    public LinkedList() {
+        this.length = 0;
+        ListElement guard = new ListElement(0);
+        guard.next = null;
+        this.head = guard;
+        this.tail = guard;
     }
 
     /**
@@ -130,9 +130,8 @@ public class LinkedList<T> implements List<T> {
     public Iterator<T> iterator() {
         return new ListIterator();
     }
+    
     private int length = 0;
     private ListElement<T> head;
     private ListElement<T> tail = head;
 }
-
-

@@ -37,6 +37,8 @@ public class LinkedStack<T> implements Stack<T> {
         return head.value;
     }
     
+    public LinkedStack() {}
+    
     /**
      * Node of this Stack
      * @param <T> element type
