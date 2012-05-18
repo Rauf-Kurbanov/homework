@@ -5,7 +5,9 @@ package main;
  * @author paRRadox
  */
 public interface HashtableInterface {
-
+    
+   public void reBuild(HashFunc hashFunc);
+    
     /**
      * Adds new value to hashtable
      *
@@ -26,5 +28,5 @@ public interface HashtableInterface {
      *
      * @return the size of hashtable
      */
-    int size();
+    public int size();
 }

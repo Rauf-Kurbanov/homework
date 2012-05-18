@@ -19,23 +19,18 @@ public class Spiral {
     public static String matrixToLine(Integer[][] array) {
         Integer cent = array.length / 2; //index of matrix central element 
         StringBuilder result = new StringBuilder(array[cent][cent].toString());
-        //System.out.print(array[cent][cent] + " "); //center
 
         for (int i = 1; i <= array.length / 2; i++) {
             for (int j = 0; j <= i; j++) {
-                //System.out.print(array[cent - i + j][cent + i] + " "); //up -> down
                 result.append(array[cent - i + j][cent + i].toString());
             }
             for (int j = 0; j <= i; j++) {
-                //System.out.print(array[cent + i][cent + i - j] + " "); // right->left
                 result.append(array[cent + i][cent + i - j].toString());
             }
             for (int j = 0; j <= i; j++) {
-                //System.out.print(array[cent + i - j][cent - i] + " "); // down -> up
                 result.append(array[cent + i - j][cent - i].toString());
             }
             for (int j = 0; j <= i; j++) {
-                //System.out.print(array[cent - i][cent - i + j] + " "); // left -> right
                 result.append(array[cent - i][cent - i + j]);
             }
         }

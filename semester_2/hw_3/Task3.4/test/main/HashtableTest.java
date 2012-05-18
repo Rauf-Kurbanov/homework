@@ -124,4 +124,11 @@ public class HashtableTest {
         boolean result = instance.isExist(token);
         assertEquals(expResult, result);
     }
+    
+    @Test
+    public void testReBuild() {
+        Hashtable instance = new Hashtable(new SimpleHashFunc());
+        instance.reBuild(new DefaultHashFunc());
+        
+    }
 }

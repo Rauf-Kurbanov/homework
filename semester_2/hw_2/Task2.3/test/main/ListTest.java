@@ -22,19 +22,21 @@ public class ListTest {
 
     @Before
     public void setUp() {
+        instance = new List();
     }
 
     @After
     public void tearDown() {
     }
-
+    
+    List instance;
+    
     /**
      * Test of add method, of class List.
      */
     @Test
     public void testAdd() {
         Object value = 100500;
-        List instance = new List();
         instance.add(value);
         Assert.assertEquals(value, instance.get(0));
     }
@@ -44,7 +46,6 @@ public class ListTest {
      */
     @Test
     public void testPrint() {
-        List instance = new List();
         instance.print();
     }
 
@@ -53,7 +54,6 @@ public class ListTest {
      */
     @Test
     public void testClear() {
-        List instance = new List();
         instance.clear();
         Assert.assertEquals(instance.get(0), null);
     }
@@ -64,7 +64,6 @@ public class ListTest {
     @Test
     public void testContains() {
         int value = 3;
-        List instance = new List();
         boolean expResult = true;
         for (int i = 0; i < 5; i++) {
             instance.add(i);
@@ -79,7 +78,6 @@ public class ListTest {
     @Test
     public void testGet() {
         int index = 3;
-        List instance = new List();
         int expResult = 100500;
         for (int i = 0; i < 5; i++) {
             instance.add(expResult - 3 + i);
@@ -94,7 +92,6 @@ public class ListTest {
     @Test
     public void testIndexOf() {
         Object value = 8;
-        List instance = new List();
         int expResult = -1;
         for (int i = 10; i < 500; i++) {
             instance.add(i);
@@ -109,7 +106,6 @@ public class ListTest {
      */
     @Test
     public void testIsEmpty() {
-        List instance = new List();
         boolean expResult = true;
         instance.clear();
         instance.set(5, 100);
@@ -123,7 +119,6 @@ public class ListTest {
     @Test
     public void testRemove() {
         Object value = 3;
-        List instance = new List();
         for (int i = 0; i < 5; i++) {
             instance.add(i);
         }
@@ -138,7 +133,6 @@ public class ListTest {
     public void testSet() {
         int index = 5;
         Object value = 100500;
-        List instance = new List();
         instance.set(index, value);
         Assert.assertEquals(null, instance.get(index));
     }

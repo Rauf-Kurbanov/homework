@@ -5,9 +5,7 @@ package main;
 
 public class List {
 
-    int length = 0;
-    private ListElement head;
-    private ListElement tail = head;
+    
 
     /**
      * Element of list
@@ -17,7 +15,7 @@ public class List {
         private Object value;
         private ListElement next;
 
-        ListElement(Object value) {
+        private ListElement(Object value) {
             this.value = value;
             this.next = null;
         }
@@ -160,11 +158,15 @@ public class List {
         this.length++;
     }
 
-    List() {
+    public List() {
         this.length = 0;
         ListElement guard = new ListElement(0);
         guard.next = null;
         this.head = guard;
         this.tail = guard;
     }
+    
+    private int length = 0;
+    private ListElement head;
+    private ListElement tail = head;
 }

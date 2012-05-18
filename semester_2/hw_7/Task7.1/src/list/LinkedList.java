@@ -133,5 +133,5 @@ public class LinkedList<T> implements List<T> {
     
     private int length = 0;
     private ListElement<T> head;
-    private ListElement<T> tail = head;
+    private ListElement<T> tail;
 }

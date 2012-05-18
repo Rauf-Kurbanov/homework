@@ -6,6 +6,20 @@ package main;
  */
 public class Hashtable implements HashtableInterface {
     
+    @Override
+    public void reBuild(HashFunc hashFunc) {
+        List[] newBuckets = new List[capasity];
+        
+        for (int i = 0; i < size(); ++i) {
+            int j = 0;
+            while (buckets[i].get(j) != null) {
+                String temp = (String)buckets[i].get(j);
+                newBuckets[hashFunc.hash(temp, size())].add(temp);
+            }
+        }
+        this.hashFunc = hashFunc;
+    }
+    
     /**
      * Creates a table of given capacity
      * @param capacity capasity of hashtable

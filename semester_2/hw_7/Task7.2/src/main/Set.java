@@ -60,7 +60,14 @@ public class Set<E> {
      * @return union of sets
      */
     public Set<E> union(Set<E> s) {
-        Set<E> result = s;
+        Set<E> result = new Set<E>();
+        Iterator<E> itt = s.iterator();
+        while (itt.hasNext()) {
+            E currValue = itt.next();
+            if (s.contains(currValue)) {
+                result.add(currValue);
+            }
+        }
         
         Iterator<E> it = iterator();
         while(it.hasNext()) {
@@ -77,6 +84,7 @@ public class Set<E> {
      */
     public Set<E> intersection(Set<E> s) {
         Set<E> result = new Set<>();
+        
         Iterator<E> it = iterator();
         while (it.hasNext()) {
             E currValue = it.next();
@@ -127,7 +135,7 @@ public class Set<E> {
     /**
      * iterator for this set
      */
-    private class SetIterator implements Iterator<E> {
+    public class SetIterator implements Iterator<E> {
 
         public SetIterator() {
             SetElement beforeHead = new SetElement(0);
@@ -138,7 +146,7 @@ public class Set<E> {
         @Override
         public boolean hasNext() {
             if (preCurrent.next == null) {
-                throw new NoSuchElementException();
+                return false;
             } else {
                 return (preCurrent.next.next != null);
             }
