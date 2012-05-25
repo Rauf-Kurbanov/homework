@@ -42,37 +42,29 @@ public class MyPriorityQueueTest {
      */
     @Test
     public void testEnqueueDequeueInteger() throws Exception {
-        System.out.println("queue");
         MyPriorityQueue<Integer> instance = new MyPriorityQueue<Integer>();
         instance.enqueue(100, 1);
-        instance.enqueue(100, 0);
-        int ret = -1;
-        ret = instance.dequeue();
-        assertEquals("first elem", 100, ret);
+        instance.enqueue(50, 0);
+        int ret = instance.dequeue();
+        assertEquals("first elem", 50, ret);
         ret = instance.dequeue();
         assertEquals("second elem", 100, ret);
     }
 
     @Test
     public void testEnqueueDequeueString() throws Exception {
-        System.out.println("queue");
         MyPriorityQueue<String> instance = new MyPriorityQueue<String>();
         instance.enqueue("str1", 1);
         instance.enqueue("str2", 1);
-        String ret = "";
-        ret = instance.dequeue();
+        String ret = instance.dequeue();
         assertEquals("first elem", "str2", ret);
         ret = instance.dequeue();
         assertEquals("second elem", "str1", ret);
     }
 
-    @Test
+    @Test(expected = EmptyQueueException.class)
     public void testQueueException() throws Exception {
         MyPriorityQueue<String> instance = new MyPriorityQueue<String>();
-        try {
             instance.dequeue();
-        } catch (Exception e) {
-            assertEquals("empty queue", 1, 1);
-        }        
     }
 }
