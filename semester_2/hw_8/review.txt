@@ -20,4 +20,4 @@
     @Test(expected = EmptyQueueException.class)
 и убрать try - catch конструкцию и assertEquals
 13) Плохие входные значения в testEnqueueDequeueInteger, следует использовать разные значения
-13) Переменную ret можно сразу инициализировать instance.dequeue()
+13) Переменную ret можно сразу инициализировать instance.dequeue() 
