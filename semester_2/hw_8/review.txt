@@ -1,5 +1,5 @@
 1) Нельзя передавать generic примитивные типы в качестве параметра:
-   MyPriorityQueue<int> intQueue = new MyPriorityQueue<int>();.--MyPriorityQueue<Integer> intQueue = new MyPriorityQueue<Integer>();>
+   MyPriorityQueue<int> intQueue --> MyPriorityQueue<Integer> intQueue 
 2) Зачем inner-класс MyPriorityQueue называть ListElement? Корректнее так:
    ListElement --> QueueElement
 3) В методе dequeue() незачем бросать RuntimeException. Скорее всего подразумевалось так:
@@ -11,14 +11,13 @@
     if (head == null) --> if (head.next == null)
 7) В методе dequeue нужно явно объявить какое исключение он бросает:
     public T dequeue() throws Exception --> public T dequeue() throws EmptyQueueException
-8) В main неудачно подобраны значения для теста, например можно заменить:
-    intQueue.enqueue(5, 1) --> intQueue.enqueue(6, 1)
-9) Выход из цикла при ловле исключения - плохое решение как иедалогически, так и функционально. В качестве решения можно реализовать в MyPriorityQueue метод isEmpty()
+8) В main неудачно подобраны значения для теста, следует использовать разные значения
+9) Выход из цикла при ловле исключения - плохое решение как иедалогически, так и функционально. 
+В качестве решения можно реализовать в MyPriorityQueue метод isEmpty()
 10) Добавлены javadoc комментарии
 11) Стилистические мелочи (пробелы и т.п.)
 12) Исправлен testQueueException() нужно было прописать:
     @Test(expected = EmptyQueueException.class)
 и убрать try - catch конструкцию и assertEquals
-13) Плохие входные значения в testEnqueueDequeueInteger следует использовать разные числа
+13) Плохие входные значения в testEnqueueDequeueInteger, следует использовать разные значения
 13) Переменную ret можно сразу инициализировать instance.dequeue()
-14) Создавать testEnqueueDequeue... не совсем идеалогически правильно, но простительно
