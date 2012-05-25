@@ -46,7 +46,7 @@ public class Calculator extends javax.swing.JFrame {
 
     private String currOp = "+";
     private Double currValue = Double.valueOf(0);
-    private boolean canClearLabel = true; //Придумать человеческое название!!!
+    private boolean canClearLabel = true; 
 
     private class NumListener implements ActionListener {
 
@@ -56,7 +56,7 @@ public class Calculator extends javax.swing.JFrame {
                 return;
             }
 
-            if (canClearLabel) {                   //Жёсткие костыли
+            if (canClearLabel) {                  
                 resLabel.setText("");
                 canClearLabel = false;
             }
@@ -80,7 +80,6 @@ public class Calculator extends javax.swing.JFrame {
 
             Double token = Double.parseDouble(resLabel.getText());
             resLabel.setText(currValue.toString());
-            //cleverPrint(currValue.toString());
 
             JButton currButton = (JButton) e.getSource();
 
