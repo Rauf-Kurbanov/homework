@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package priorityqueue;
 
 import org.junit.After;
@@ -65,6 +64,6 @@ public class MyPriorityQueueTest {
     @Test(expected = EmptyQueueException.class)
     public void testQueueException() throws Exception {
         MyPriorityQueue<String> instance = new MyPriorityQueue<String>();
-            instance.dequeue();
+        instance.dequeue();
     }
 }

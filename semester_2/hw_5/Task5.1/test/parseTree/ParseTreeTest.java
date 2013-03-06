@@ -25,7 +25,16 @@ public class ParseTreeTest {
     }
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
+        File file = new File("input.txt");
+
+            file.createNewFile();
+            try (BufferedWriter out = new BufferedWriter(new FileWriter("input.txt"))) {
+                out.write(str);
+            }
+
+
+        instance = new ParseTree(file);
     }
 
     @After
@@ -36,17 +45,16 @@ public class ParseTreeTest {
      * Test of print method, of class ParseTree.
      */
     @Test
-    public void testPrint() {
+    public void testPrint() throws Exception {
         String str = "(* (+ 1 1) 2)";
 
         File file = new File("input.txt");
-        try {
+
             file.createNewFile();
             try (BufferedWriter out = new BufferedWriter(new FileWriter("input.txt"))) {
                 out.write(str);
             }
-        } catch (IOException e) {
-        }
+
 
         ParseTree instance = new ParseTree(file);
         System.out.println(instance.print());
@@ -75,4 +83,6 @@ public class ParseTreeTest {
         System.out.println(instance.calculate());
         assertEquals(4, instance.calculate());
     }
+    
+    private ParseTree instance;
 }

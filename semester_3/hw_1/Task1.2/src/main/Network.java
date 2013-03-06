@@ -57,9 +57,9 @@ public class Network {
         int k = 0;
         for (int i = 0; i < size; ++i) {
             if (users[i].isInfected())
-                k++;
+                k ++;
         }
-        return k*100/size + "% infected";
+        return k * 100 /size + "% infected";
     }
     
     private void update() {
@@ -71,9 +71,14 @@ public class Network {
             }
 
         }
+        for (int i = 0; i < size; ++i) {
+            if (users[i].isInjured()) {
+                users[i].infect();
+            }
+        }
     }
     
-     private int size;
+    private int size;
     
     private Computer[] users;
     

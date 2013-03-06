@@ -57,7 +57,7 @@ public class NetworkTest {
         Network network = new Network(connections, users);
         network.start();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10000);
         } catch (InterruptedException ex) {
             Logger.getLogger(NetworkTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -80,7 +80,7 @@ public class NetworkTest {
         @Override
         public void attack(Computer aim) {
             if (isInfected() && 50 < aim.os.getProb()) {
-                aim.infect();
+                aim.injure();
             }
         }
     }
