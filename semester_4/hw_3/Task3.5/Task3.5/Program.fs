@@ -10,6 +10,7 @@ let rec calculate tree =
         | '-' -> calculate l - calculate r
         | '*' -> calculate l * calculate r
         | '/' -> calculate l / calculate r
+        | _ -> failwith("Invalid operation")
     | Leaf dg -> dg
 
 let t = ParseTree('+', ParseTree('*', Leaf(2), Leaf(2)), Leaf(2))
