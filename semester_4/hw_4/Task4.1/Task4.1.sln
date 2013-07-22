@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Task4.1", "Task4.1\Task4.1.fsproj", "{E4C86285-D367-4265-AE7D-76A789A6B8D2}"
 EndProject
 Global

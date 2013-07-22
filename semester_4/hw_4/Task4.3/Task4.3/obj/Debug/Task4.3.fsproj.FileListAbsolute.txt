@@ -1,0 +1,9 @@
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\bin\Debug\Task4.3.exe.config
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\bin\Debug\Task4.3.XML
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\bin\Debug\Task4.3.exe
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\bin\Debug\Task4.3.pdb
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\bin\Debug\FSharp.Core.dll
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\bin\Debug\FSharp.Core.xml
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\obj\Debug\Task4.3.fsprojResolveAssemblyReference.cache
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\obj\Debug\Task4.3.exe
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_4\Task4.3\Task4.3\obj\Debug\Task4.3.pdb

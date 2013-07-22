@@ -1,0 +1,9 @@
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\bin\Debug\Task6.1.exe.config
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\bin\Debug\Task6.1.XML
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\bin\Debug\Task6.1.exe
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\bin\Debug\Task6.1.pdb
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\bin\Debug\FSharp.Core.dll
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\bin\Debug\FSharp.Core.xml
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\obj\Debug\Task6.1.fsprojResolveAssemblyReference.cache
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\obj\Debug\Task6.1.exe
+C:\Users\master\Documents\GitHub\homework\semester_4\hw_6\Task6.1\Task6.1\obj\Debug\Task6.1.pdb
