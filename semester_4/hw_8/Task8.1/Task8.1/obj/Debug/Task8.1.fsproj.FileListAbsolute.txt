@@ -1,9 +1,0 @@
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\bin\Debug\Task8.1.exe.config
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\bin\Debug\Task8.1.XML
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\bin\Debug\Task8.1.exe
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\bin\Debug\Task8.1.pdb
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\bin\Debug\FSharp.Core.dll
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\bin\Debug\FSharp.Core.xml
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\obj\Debug\Task8.1.fsprojResolveAssemblyReference.cache
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\obj\Debug\Task8.1.exe
-C:\Users\master\Documents\GitHub\homework\semester_4\hw_8\Task8.1\Task8.1\obj\Debug\Task8.1.pdb
