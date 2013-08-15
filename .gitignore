@@ -1,45 +1,50 @@
-/semester_2/hw_7/Task7.1/nbproject/private/
-/semester_2/hw_4/Task4.2/nbproject/private/
-/semester_2/hw_7/Task7.1/build/
-/semester_2/hw_7/Task7.1/dist/
-/Task7.2/nbproject/private/
-/semester_2/hw_7/Task7.2/nbproject/private/
-/semester_2/hw_7/Task7.2/build/
-/semester_2/hw_7/Task7.2/dist/
-/exam/work1#/nbproject/private/
-/exam/work1#/build/
-/exam/work1#/dist/
-/semester_2/hw_5/Task5.2/nbproject/private/
-/semester_2/hw_5/Task5.2/dist/
-/semester_2/hw_5/Task5.2/build/
-/semester_2/hw_5/Task5.1/nbproject/private/
-/semester_2/hw_6/Task6.1/nbproject/private/
-/semester_2/hw_4/Task4.2/build/
-/semester_2/hw_4/Task4.2/dist/
-/semester_2/hw_5/Task5.1/build/
-/semester_2/hw_6/Task6.2/nbproject/private/
-/semester_2/hw_6/Task6.2/build/
-/semester_2/hw_6/Task6.2/dist/
-/semester_2/hw_6/Task6.1/build/
-/semester_2/hw_6/Task6.1/dist/
-/semester_2/hw_2/Task2.1/dist/
-/semester_2/hw_2/Task2.1/build/
-/semester_2/hw_2/Task2.3/build/
-/semester_2/hw_3/Task3.3/nbproject/private/
-/semester_2/hw_3/Task3.3/build/
-/semester_2/hw_3/Task3.4/nbproject/private/
-/semester_2/hw_3/Task3.4/build/
-/semester_2/hw_3/Task3.4/dist/
-/semester_2/hw_5/Task5.1/dist/
-/semester_2/hw_8/priorityqueue/dist/
-/semester_2/hw_8/priorityqueue/build/
-/semester_3/hw_1/Task1.1/nbproject/private/
-/semester_3/hw_1/Task1.1/dist/
-/semester_3/hw_1/Task1.1/build/
-/semester_3/hw_1/Task1.2/nbproject/private/
-/semester_3/hw_1/Task1.2/build/
-/semester_3/hw_1/Task1.2/dist/
-/semester_3/hw_1/JavaApplication36/nbproject/private/
-/semester_3/hw_2/Task2.1/nbproject/private/
-/semester_3/hw_2/Task2.1/dist/
-/semester_3/hw_2/Task2.1/build/
+# compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.suo
+# Include dlls if they’re in the NuGet packages directory
+!/packages/*/lib/*.dll
+# VS Upgrade stuff #
+####################
+UpgradeLog.XML
+_UpgradeReport_Files/
+# Directories #
+###############
+bin/
+obj/
+TestResults/
+# Web publish log #
+###################
+*.Publish.xml
+# Resharper #
+#############
+/_ReSharper.*
+*.ReSharper.*
+# Packages #
+############
+# it’s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+# Logs and databases #
+######################
+*.log
+*.sqlite
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
