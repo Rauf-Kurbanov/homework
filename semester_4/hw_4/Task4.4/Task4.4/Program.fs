@@ -1,24 +1,21 @@
 ﻿type Expr =
     | X
     | Const of float
-    | Oper of Expr * Expr
-
-type Oper =
     | Add of Expr * Expr
     | Sub of Expr * Expr
     | Mult of Expr * Expr
     | Div of Expr * Expr
-    
-let (|Oper|_|) (Expr : Expr) =
-    match Expr with
+   
+let (|Oper|_|) (expr : Expr) =
+    match expr with
     | Add(e1, e2) -> Some(Add, e1, e2)
     | Sub(e1, e2) -> Some(Sub, e1, e2)
     | Mult(e1, e2) -> Some(Mult, e1, e2)
     | Div(e1, e2) -> Some(Div, e1, e2)
     | _ -> None
 
-let rec simplifyExpr (Expr : Expr) =
-    match Expr with
+let rec simplifyExpr (expr : Expr) =
+    match expr with
     | Add(Const(n1), Const(n2)) -> Const(n1 + n2)
     | Sub(Const(n1), Const(n2)) -> Const(n1 - n2)
     | Mult(Const(n1), Const(n2)) -> Const(n1 * n2)
@@ -37,20 +34,12 @@ let rec simplifyExpr (Expr : Expr) =
     | Mult(x1, Div(Const(n), x2)) -> Mult(Const(n), Div(x1, x2)) |> simplifyExpr
     | Div(Const(0.0), x) -> Const(0.0)
     | Div(x, Const(1.)) -> x |> simplifyExpr
-    (*
-    | Oper (Oper, x1, x2) ->
-        let y1 = simplifyExpr x1
-        let y2 = simplifyExpr x2
-        if y1 <> x1 || y2 <> x2 then
-            Oper(simplifyExpr x1, simplifyExpr x2) |> simplifyExpr
-        else
-            Oper(x1, x2)
-    *)
-    | _ -> Expr
+    | Oper (oper, x1, x2) -> oper(simplifyExpr x1, simplifyExpr x2) |> simplifyExpr
+    | _ -> expr
 
-let rec derivative (Exp : Expr) =
+let rec derivative (expr : Expr) =
     let der =
-        match Exp with
+        match expr with
         | X -> Const(1.)
         | Const(n) -> Const(0.0)
         | Add(x1, x2) -> Add(derivative x1, derivative x2)
